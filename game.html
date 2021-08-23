@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+    </script>
+    
+    <link rel="stylesheet" href="./style/style_game.css">
+    <script src="./script/game.js"></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <div class="div_logo">
+                <img class="logo" src="./img/logo/logo_pokemon_01.png" alt="">
+                <p id="player_name_1">Player</p>
+                <button id="btn_new" onclick="btnNewGameOnClick(event)">New Game</button>
+            </div>
+        </header>
+
+        <audio class="audio" src="./audio/audio.mp3" type="audio/mp3"></audio>
+        
+        <content id="content">
+            <div id="battle_area" class="">
+                <div id="com_stats" class="layout_stats">
+                    <div class="p_name">
+                        <h2>Com</h2>
+                        <p id="comLife" class="p_life">Life: 200</p>
+                        <canvas id="canvas_com" class="canvas"></canvas>
+                    </div>
+
+                    <div class="p_cards">
+                        <p id="comCards">Cards: 32</p>
+                        <img class="img_cards" src="./img/background/deck.png" alt="not-found">
+                    </div>
+
+                    <div class="p_graveyard">
+                        <p id="comGraveyard">Graveyard: 0</p>
+                        <img class="img_graveyard" src="./img/background/rip_01.png" alt="not-found">
+                    </div>
+                </div>
+
+                <div id="battle_cards">
+                    <div id="text_area">
+                        <div id="player_atribute_area">
+                            <p id="player_atribute">Player Choice Atribute</p>
+                        </div>
+                        <div id="com_atribute_area">
+                            <p id="com_atribute">Com Choice Atribute</p>
+                        </div>
+                    </div>
+
+                    <div id="cards_area">
+                        <div id="player_card_area">
+                            <div id="cardFlipPlayer" class="cardFlip flip">
+                                <div id="playerFront" class="face">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="vs"></div>
+
+                        <div id="com_card_area">
+                            <div id="cardFlipCom" class="cardFlip flip">
+                                <div id="comFront" class="face">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="player_stats" class="layout_stats">
+                    <div class="p_name">
+                        <h2 id="player_name_2">Player</h2>
+                        <p id="playerLife" class="p_life">Life: 200</p>
+                        <canvas id="canvas_player" class="canvas"></canvas>
+                    </div>
+
+                    <div class="p_cards">
+                        <p id="playerCards">Cards: 32</p>
+                        <img class="img_cards" src="./img/background/deck.png" alt="not-found">
+                    </div>
+
+                    <div class="p_graveyard">
+                        <p id="playerGraveyard">Graveyard: 0</p>
+                        <img class="img_graveyard" src="./img/background/rip_01.png" alt="not-found">
+                    </div>
+                </div>
+            </div>
+
+            <div id="player_cards" class="layout_cards">
+                <div id="card_1" class="card_layout">
+
+                </div>
+
+                <div id="card_2" class="card_layout">
+
+                </div>
+
+                <div id="card_3" class="card_layout">
+
+                </div>
+
+                <div id="card_4" class="card_layout">
+
+                </div>
+
+                <div id="card_5" class="card_layout">
+
+                </div>
+            </div>
+        </content>
+    </div>
+</body>
+</html>
